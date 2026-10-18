@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCJ_5_KwwuYrCZxuBpA8wIVCV_7rpvkmUHnmntR0ZvA&s=10);
+}
+
+.logo {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    color: darkred;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    padding: 10px 20px 10px;
+}
+
+div input {
+    padding: 20px 30px 20px;
+    font-size: 18px;
+    color: black;
+    margin-right: 15px;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+button {
+    font-size: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: peru;
+    transform: scale(1.03);
+}
+
+.task-list {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    padding: 10px 20px 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px 20px 10px;
+}
+
+#clearButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px 20px 10px;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    width: min(100%, 700px);
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 10px 0;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+}
+
+#taskList li.purchased .item-details {
+    color: #666;
+    text-decoration: line-through;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-details input {
+    width: min(40vw, 220px);
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.item-actions {
+    display: flex;
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.item-actions button {
+    padding: 10px 14px;
+    font-size: 15px;
+}
+
+.purchased .item-name {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.edit-fields {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+}
+
+.edit-fields input {
+    min-width: 0;
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    #taskList li {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .edit-fields {
+        width: 100%;
+    }
+
+    .item-actions {
+        flex-wrap: wrap;
+    }
+}
